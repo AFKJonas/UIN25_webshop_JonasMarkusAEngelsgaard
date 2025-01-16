@@ -51,9 +51,9 @@ function printCart() {
     let cartNumber = 0;
 
     //Gå igjennom cart-arryen og generere HTML for hvert produkt:
-    cart.map((cartprod, index) =>{
+    cart.map((cartprod, index) => {
         const currentProduct = products.findIndex(p => p.prodid === cartprod.cartprodid);
-        const currentProductInfo = products[currentProduct];
+        const currentProductInfo = products[currentProduct]
         cartHTML += `<article class="cart-product">
                     <span class="title">${currentProductInfo.title}</span>
                     <span class="price">${currentProductInfo.price},-</span>
@@ -67,7 +67,7 @@ function printCart() {
     })
 
     //Skriv ut generert HTML til Indexfilen:
-    ducument.getElementById("cart-products").innerHTML = cartHTML;
+    document.getElementById("cart-products").innerHTML = cartHTML;
     //Skrive ut total pris:
     document.getElementById("cart-total").innerHTML = cartTotal;
     //Skrive ut antall produkter:
